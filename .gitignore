@@ -3,3 +3,12 @@
 ################################################################################
 
 /CH3.Core/bin/Debug/net461
+/.vs/CH3/v15/Server/sqlite3
+/CH3.Data/bin/Debug
+/CH3.Data/obj
+/CH3.Services/bin/Debug
+/CH3.Services/obj
+/CH3.Web.Framework/bin/Debug/net461
+/CH3.Web.Framework/obj
+/CH3Web/bin/Debug/net461
+/CH3Web/obj

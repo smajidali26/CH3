@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BundlerMinifier.Core" Version="2.6.362" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="7.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CH3.Core\CH3.Core.csproj" />
+    <ProjectReference Include="..\CH3.Data\CH3.Data.csproj" />
+    <ProjectReference Include="..\CH3.Services\CH3.Services.csproj" />
+  </ItemGroup>
+
+</Project>
