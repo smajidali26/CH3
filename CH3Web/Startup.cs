@@ -41,10 +41,16 @@ namespace CH3Web
             {
                 app.UseExceptionHandler("/Error");
             }
-
+            app.UseDefaultFiles();
             app.UseStaticFiles();
 
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }

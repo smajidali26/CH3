@@ -152,7 +152,7 @@ namespace CH3.Core.Infrastructure
             CommonHelper.BaseDirectory = hostingEnvironment.ContentRootPath;
 
             //initialize plugins
-            var mvcCoreBuilder = services.AddMvcCore();
+            var mvcCoreBuilder = services.AddMvc();
             //PluginManager.Initialize(mvcCoreBuilder.PartManager, nopConfig);
         }
 

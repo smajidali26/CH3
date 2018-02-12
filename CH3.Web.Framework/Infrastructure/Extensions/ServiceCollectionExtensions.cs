@@ -49,8 +49,11 @@ namespace CH3.Web.Framework.Infrastructure.Extensions
 
 
             //now resolve installation service
-            var installationService = EngineContext.Current.Resolve<IInstallationService>();
-            installationService.InstallData(string.Empty, string.Empty, false);
+            if (!DataSettingsHelper.DatabaseIsInstalled())
+            {
+                var installationService = EngineContext.Current.Resolve<IInstallationService>();
+                installationService.InstallData(string.Empty, string.Empty, false);
+            }
             return serviceProvider;
         }
 
