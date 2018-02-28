@@ -7,6 +7,7 @@ using CH3.Core.Infrastructure;
 using CH3.Core.Infrastructure.DependencyManagement;
 using CH3.Data;
 using CH3.Services.Installation;
+using CH3.Web.Framework.MVC.Routing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,6 +55,8 @@ namespace CH3.Web.Framework.Infrastructure
             
             //repositories
             builder.RegisterGeneric(typeof(EfRepository<>)).As(typeof(IRepository<>)).InstancePerLifetimeScope();
+
+            builder.RegisterType<RoutePublisher>().As<IRoutePublisher>().SingleInstance();
 
             //installation service
             if (!DataSettingsHelper.DatabaseIsInstalled())
